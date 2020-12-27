@@ -1,0 +1,133 @@
+:root {
+  --primarycolor: #593a92;
+  --secondarycolor: #63196f;
+  --gridprimary: #c0a9eb;
+  --gridsecondary: blue;
+  --gridblockdimension: 35px;
+  --boxshadowcolor: #5805a58c;
+  --gridwidth: 20;
+  --fontcolor: white;
+  --fontcolorsecondary:black;
+  --copyright:#4e4d4d;
+}
+
+/*
+Utility
+*/
+
+.center_title{
+  text-align: center;
+  margin:auto;
+}
+
+/*
+Navbar styling
+*/
+
+nav {
+  top: 0px;
+  z-index:999;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  background-color: var(--primarycolor);
+}
+nav a {
+  display: block;
+  text-decoration: none;
+  color: var(--fontcolor);
+  padding: 15px 30px;
+}
+
+nav li {
+  list-style-type: none;
+  display: inline-block;
+}
+nav li:hover {
+  background-color: var(--secondarycolor);
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Settings margin of the whole page from navigation menu */
+#body {
+  margin-top: 70px;
+}
+.center_screen {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+
+/* Ledger */
+.ledger{
+  display:flex;
+}
+
+.ledger ul li{
+  list-style-type:none;
+  display:inline-block;
+  padding:50px;
+}
+
+.ledger ul li a{
+  padding:25px;
+  text-decoration:none;
+  color: var(--fontcolorsecondary);
+  cursor: default;
+}
+.icon_wall{
+  color:#884949;
+}
+.icon_path{
+  color:#aee073;
+}
+
+/* The Grid/table */
+#grid {
+  display: grid;
+  grid-template-columns: repeat(var(--gridwidth), var(--gridblockdimension));
+  justify-content: center;
+  /*     grid-gap:2px 2px;; */
+}
+
+#grid .block {
+  border: 1px solid var(--gridprimary);
+  /*     box-shadow:inset 0.1px 0.1px 1px 1px var(--boxshadowcolor); */
+  width: var(--gridblockdimension);
+  height: var(--gridblockdimension);
+}
+
+#grid .block i{
+  display:flex;
+  justify-content:center;
+
+}
+
+
+/* footer  */
+footer{
+  display: grid;
+  justify-content: center;
+}
+
+.copyright{
+  color:var(--copyright);
+}
+.social-icon{
+  list-style-type: none;
+  display: inline;
+}
+
+.social-icon li{
+  display: inline;
+  padding:20px;
+}
+
+.social-icon li a{
+  text-decoration: none;
+  color:black;
+}
+
